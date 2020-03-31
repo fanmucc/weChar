@@ -1,0 +1,4 @@
+/**app.wxss**/
+@import "/assets/css/iconfont/iconfont.wxss";
+@import "/assets/css/cssrest.wxss";
+
