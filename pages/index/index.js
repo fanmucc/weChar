@@ -9,6 +9,14 @@ Page({
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo')
   },
+  onShow () {
+      console.log(app.galoblaData)
+      if (typeof this.getTabBar === 'function' && this.getTabBar()) {
+          this.getTabBar().setData({
+              selected: 0
+          })
+      }
+  },
   //事件处理函数
   bindViewTap: function() {
     wx.navigateTo({

@@ -38,6 +38,9 @@ App({
     statusBarHeight: wx.getSystemInfoSync()['statusBarHeight'],
     phoneSystem: wx.getSystemInfoSync()["system"].indexOf("iOS") !== -1 ? 2 : 1,
     getMenuButtonBoundingClientRect: wx.getMenuButtonBoundingClientRect(),
-    screenWidth: wx.getSystemInfoSync()['screenWidth']
+    screenWidth: wx.getSystemInfoSync()['screenWidth'],
+    iphoneModel: wx.getSystemInfoSync()["model"].indexOf("iPhone X") !== -1 || wx.getSystemInfoSync()["model"].indexOf("iPhone 11") !== -1 || wx.getSystemInfoSync()["model"].indexOf("iPhone XR") !== -1 || wx.getSystemInfoSync()["model"].indexOf("unknow") !== -1,
+    // 自定义tabbar数据
+    isShowTabBar: true,
   }
 })

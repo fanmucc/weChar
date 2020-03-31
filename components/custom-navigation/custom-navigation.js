@@ -19,11 +19,11 @@ Component({
      },
      back: {
        type: Boolean,
-       value: true
+       value: false
      },
      home: {
        type: Boolean,
-       value: true
+       value: false
      },
      customBack: {
        type: Boolean,
@@ -48,7 +48,6 @@ Component({
   },
   lifetimes: {
     attached () {
-      console.log(this.data.back)
       this.setData({
         navigationWidth: this.data.back === false ? '25px' : app.globalData.getMenuButtonBoundingClientRect.width || this.data.home === false ? '25px' : app.globalData.getMenuButtonBoundingClientRect.width
       })

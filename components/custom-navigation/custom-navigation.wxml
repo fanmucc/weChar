@@ -1,5 +1,5 @@
 <view class="navigation-box" style="height:{{navigationHeight}}px">
-    <view class="navigation-icon-content" style="width: {{navigationWidth}}px; height:{{titleHeight}}px; left: {{navigationLeft}}px; top: {{navigationTop}}px; ">
+    <view class="navigation-icon-content" wx:if="{{back === true || home === true}}" style="width: {{navigationWidth}}px; height:{{titleHeight}}px; left: {{navigationLeft}}px; top: {{navigationTop}}px; ">
         <view class="navigation-icon-back" wx:if="{{back}}" bindtap="goBack">
             <view class="iconfont icon icon-back"></view>
         </view>

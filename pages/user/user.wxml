@@ -1,0 +1,4 @@
+<Navigation title="个人中心"></Navigation>
+<view class="" hover-class="none" hover-stop-propagation="false">
+    个人中心
+</view>
