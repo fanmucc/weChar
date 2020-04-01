@@ -4,3 +4,4 @@
         <view class="tabBar-text">{{item.text}}</view>
     </view>
 </view>
+<view class="empty" style="padding-bottom: {{iphoneModel === true ? '30' : '0'}}px;"></view>

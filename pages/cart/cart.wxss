@@ -1,0 +1,17 @@
+.cart-content {
+    display: flex;
+    width: 100%;
+    background-color: #FAFAFA;
+}
+.sidebar {
+    position: fixed;
+    width: 20%;
+    z-index: 99;
+    box-sizing: border-box;
+    background-color: #FAFAFA;
+}
+.cart-lists {
+    width: calc(100% - 20%);
+    margin-left: 20%;
+    background-color: rgba(240,240,240,1);
+}

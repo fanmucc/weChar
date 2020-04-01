@@ -1,0 +1,14 @@
+<view class="cart-list">
+    <image src="{{image}}" class="images" alt="商品图片"/>
+    <view class="cart-list-content">
+        <view class="content-box">
+            <text class="cart-name" selectable="false" space="false" decode="false">款号: {{name}}</text>
+        </view>
+        <view class="content-box">
+            <text class="cart-num" selectable="false" space="false" decode="false">库存: {{nums}}</text>
+        </view>
+        <view class="content-box">
+            <text class="cart-color" selectable="false" space="false" decode="false">颜色: {{color}}</text>
+        </view>
+    </view>
+</view>

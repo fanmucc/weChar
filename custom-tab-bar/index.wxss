@@ -33,3 +33,7 @@
     color: #9BD0EA
 }
 
+.empty {
+    height: 47px;
+}
+

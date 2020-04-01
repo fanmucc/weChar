@@ -24,7 +24,7 @@
 // 
 if (typeof this.getTabBar === 'function' && this.getTabBar()) {
     this.getTabBar().setData({
-        selected: 2
+        selected: 2    // 自定义的tabBarList的index(视自己设置的变量值来定义)
     })
 }
 ```

@@ -1,4 +1,16 @@
 <Navigation back="{{true}}" title="购物车"></Navigation>
-<view class="">
-    user
+<view class="cart-content">
+    <scroll-view scroll-x="false" scroll-x="false" class="sidebar">
+        <van-sidebar active-key="{{ activeKey }}" bind:change="onChange">
+            <van-sidebar-item title="标签名称" />
+            <van-sidebar-item title="标签名称" />
+            <van-sidebar-item title="标签名称" />
+        </van-sidebar>
+    </scroll-view>
+    <scroll-view class="cart-lists" hover-class="none" hover-stop-propagation="false">
+        <cart-list wx:for="{{list}}" wx:key="index" name="{{item.name}}"></cart-list>
+    </scroll-view>
+</view>
+<view style="height: 77px; z-index: 9999" hover-class="none" hover-stop-propagation="false">
+    ceshi
 </view>
