@@ -1,0 +1,53 @@
+<Navigation back="{{true}}" home="{{true}}" title="购物车"></Navigation>
+<view>
+    <view class="swiper-img">
+        <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+            <block wx:for="{{background}}" wx:key="*this">
+            <swiper-item>
+                <view class="swiper-item {{item}}"></view>
+            </swiper-item>
+            </block>
+        </swiper>
+    </view>
+    <view class="table-view goods-table">
+        <h1 class="brand-name">个么</h1>
+        <view>
+            <view class="goods-table-view table-header">
+                <view class="goods-table-view-content-chima">尺码</view>
+                <view class="goods-table-view-content">款号</view>
+                <view class="goods-table-view-content">颜色</view>
+                <view class="goods-table-view-content">库存(件)</view>
+            </view>
+            <view class="goods-table-view">
+                <view class="goods-table-view-content-chima">5</view>
+                <view class="goods-table-view-content">123</view>
+                <view class="goods-table-view-content">红色</view>
+                <view class="goods-table-view-content">32</view>
+            </view>
+            <view class="goods-table-view">
+                <view class="goods-table-view-content-chima">7</view>
+                <view class="goods-table-view-content">123</view>
+                <view class="goods-table-view-content">红色</view>
+                <view class="goods-table-view-content">32</view>
+            </view>
+            <view class="goods-table-view">
+                <view class="goods-table-view-content-chima">9</view>
+                <view class="goods-table-view-content">123</view>
+                <view class="goods-table-view-content">红色</view>
+                <view class="goods-table-view-content">32</view>
+            </view>
+            <view class="goods-table-view">
+                <view class="goods-table-view-content-chima">11</view>
+                <view class="goods-table-view-content">123</view>
+                <view class="goods-table-view-content">红色</view>
+                <view class="goods-table-view-content">32</view>
+            </view>
+            <view class="goods-table-view">
+                <view class="goods-table-view-content-chima">13</view>
+                <view class="goods-table-view-content">123</view>
+                <view class="goods-table-view-content">红色</view>
+                <view class="goods-table-view-content">32</view>
+            </view>
+        </view>
+    </view>
+</view>

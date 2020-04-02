@@ -3,7 +3,8 @@
     "pages/index/index",
     "pages/cart/cart",
     "pages/user/user",
-    "pages/logs/logs"
+    "pages/logs/logs",
+    "pages/goods/goods"
   ],
   "usingComponents": {
       "Navigation": "components/custom-navigation/custom-navigation"

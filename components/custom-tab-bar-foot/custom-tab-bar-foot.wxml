@@ -1,0 +1,1 @@
+<view class="empty" style="padding-bottom: {{iphoneModel === true ? '30' : '0'}}px;"></view>

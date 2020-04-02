@@ -1,0 +1,4 @@
+.empty {
+    height: 47px;
+    z-index: 99
+}

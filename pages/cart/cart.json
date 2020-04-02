@@ -2,6 +2,8 @@
     "usingComponents": {
         "van-sidebar": "../../miniprogram_npm/@vant/weapp/sidebar/index",
         "van-sidebar-item": "../../miniprogram_npm/@vant/weapp/sidebar-item/index",
-        "cart-list": "../../components/cart-list/cart-list"
+        "cart-list": "../../components/cart-list/cart-list",
+        "tab-bar-foot": "../../components/custom-tab-bar-foot/custom-tab-bar-foot",
+        "van-toast": "../../miniprogram_npm/@vant/weapp/toast/index"
     }
 }

@@ -8,9 +8,7 @@
         </van-sidebar>
     </scroll-view>
     <scroll-view class="cart-lists" hover-class="none" hover-stop-propagation="false">
-        <cart-list wx:for="{{list}}" wx:key="index" name="{{item.name}}"></cart-list>
+        <cart-list wx:for="{{list}}" wx:key="index" name="{{item.name}}" data-id="{{item.id}}" bindtap="getGoods"></cart-list>
     </scroll-view>
 </view>
-<view style="height: 77px; z-index: 9999" hover-class="none" hover-stop-propagation="false">
-    ceshi
-</view>
+<tab-bar-foot/>
