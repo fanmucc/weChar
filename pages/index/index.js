@@ -10,7 +10,6 @@ Page({
     canIUse: wx.canIUse('button.open-type.getUserInfo')
   },
   onShow () {
-      console.log(app.galoblaData)
       if (typeof this.getTabBar === 'function' && this.getTabBar()) {
           this.getTabBar().setData({
               selected: 0

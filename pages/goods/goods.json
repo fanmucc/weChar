@@ -1,5 +1,5 @@
 {
     "usingComponents": {
-        
+        "mini-swiper": "../../components/swiper/swiper"
     }
 }

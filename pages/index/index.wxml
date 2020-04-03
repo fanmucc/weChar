@@ -13,4 +13,7 @@
     <view class="iconfont icon icon-back"></view>
     <view class="iconfont icon icon-Home"></view>
   </view>
+  <view>
+    <mini-swiper contour="{{true}}" circular="{{true}}" currentBlock="{{true}}" autoplay="{{true}}"/>
+  </view>
 </view>

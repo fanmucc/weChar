@@ -1,0 +1,12 @@
+<view class="swiperView" style="width: {{contour === false ? width : wh.width}}; height: {{contour === false ? height : wh.height}}">
+    <swiper class="swiper-content" contour="{{contour}}" indicator-dots="{{indicator_dots}}" indicator-color="{{indicator_color}}" indicator-active-color="{{indicator_active_color}}" current="{{current}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="{{circular}}" vertical="{{vertical}}" bindchange="currentChange">
+        <block wx:for="{{data}}">
+            <swiper-item>
+                <image class="swiper-image" src="{{item.imagePath}}" mode="aspectFit" binderror="errorimg" bindload="imgLoad" data-err-img="{{index}}" />
+            </swiper-item>
+        </block>
+    </swiper>
+    <view class="swiper-image-current" wx:if="{{currentBlock}}">
+        {{current + 1}} / {{data.length}}
+    </view>
+</view>

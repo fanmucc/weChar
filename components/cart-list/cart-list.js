@@ -1,6 +1,14 @@
 const app = getApp();
 Component({
     // 默认值
+    /**
+   * 组件的属性列表
+   * @title 渲染商品列表
+   * @image 图片地址
+   * @name  商品款号
+   * @color 商品颜色
+   * @nums 商品数量
+   */
     properties: {
         image: {
             type: String,

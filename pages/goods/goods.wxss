@@ -3,8 +3,12 @@
     margin-bottom: 20rpx;
 }
 
+.swiper-imgs {
+    border-bottom: 1rpx solid #e5e5e5;
+}
 
 .table-view {
+    margin-top: 20rpx;
     padding: 10rpx;
 }
 

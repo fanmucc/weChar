@@ -1,13 +1,7 @@
 <Navigation back="{{true}}" home="{{true}}" title="购物车"></Navigation>
 <view>
-    <view class="swiper-img">
-        <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
-            <block wx:for="{{background}}" wx:key="*this">
-            <swiper-item>
-                <view class="swiper-item {{item}}"></view>
-            </swiper-item>
-            </block>
-        </swiper>
+    <view class="swiper-imgs">
+        <mini-swiper contour="{{true}}" circular="{{true}}" currentBlock="{{true}}" autoplay="{{true}}"/>
     </view>
     <view class="table-view goods-table">
         <h1 class="brand-name">个么</h1>
