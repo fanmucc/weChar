@@ -127,7 +127,8 @@ Component({
         errorimg(err) {
             console.log(err)
             let errImgIndex = err.target.dataset.errImg;   // 找到错误图片的下标
-            let imgObject = this.data.data[errImgIndex].imagePath;   // 获取到data中错误的链接
+            let imgObject = `data[${errImgIndex}].imagePath`;   // 获取到data中错误的链接
+            console.log(imgObject)
             let obj = {};
             obj[imgObject] = 'https://res.wx.qq.com/wxdoc/dist/assets/img/0.4cb08bb4.jpg';
             console.log(obj)
