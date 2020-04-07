@@ -1,10 +1,10 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/cart/cart",
     "pages/user/user",
-    "pages/logs/logs",
-    "pages/goods/goods"
+    "pages/cart/cart",
+    "pages/goods/goods",
+    "pages/logs/logs"
   ],
   "usingComponents": {
       "Navigation": "components/custom-navigation/custom-navigation"

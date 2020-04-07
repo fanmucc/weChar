@@ -20,7 +20,6 @@ Component({
 
         },
         attached () {  // 节点树完成，可以使用setData渲染节点，但是无法操作节点
-            console.log(app.globalData)
             this.tabBarList()
         },
         ready () {     // 组件布局完成，这时可以获取节点信息，也可以操作节点

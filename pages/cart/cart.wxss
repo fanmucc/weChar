@@ -1,3 +1,9 @@
+.scroll {
+    margin-top: 215rpx;
+    height: 800rpx;
+    white-space: normal;
+}
+
 .cart-content {
     display: flex;
     width: 100%;
@@ -13,5 +19,6 @@
 .cart-lists {
     width: calc(100% - 20%);
     margin-left: 20%;
+    z-index: 1;
     background-color: rgba(240,240,240,1);
 }

@@ -59,7 +59,7 @@ Page({
     })
   },
   // 自定义返回事件
-  goback() {
-    console.log('我是自定义事件')
-  }
+  // goback() {
+  //   console.log('我是自定义事件')
+  // }
 })

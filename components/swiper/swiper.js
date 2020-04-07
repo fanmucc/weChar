@@ -109,7 +109,6 @@ Component({
     computed: {
         wh(data) {
             if (data.contour) {
-                console.log(wx.getSystemInfoSync()['screenWidth'])
                 return {
                     width: `${wx.getSystemInfoSync()['screenWidth']}px`,
                     height: `${wx.getSystemInfoSync()['screenWidth'] / 5 * 6 }px`
@@ -125,18 +124,15 @@ Component({
         },
         // 图片加载失败
         errorimg(err) {
-            console.log(err)
             let errImgIndex = err.target.dataset.errImg;   // 找到错误图片的下标
             let imgObject = `data[${errImgIndex}].imagePath`;   // 获取到data中错误的链接
-            console.log(imgObject)
             let obj = {};
             obj[imgObject] = 'https://res.wx.qq.com/wxdoc/dist/assets/img/0.4cb08bb4.jpg';
-            console.log(obj)
             this.setData(obj)
         },
         // 图片渲染完毕
         imgLoad(load) {
-            console.log(load)
+            //
         }
     }
 })

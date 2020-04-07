@@ -28,3 +28,4 @@ if (typeof this.getTabBar === 'function' && this.getTabBar()) {
     })
 }
 ```
+

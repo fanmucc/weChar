@@ -1,9 +1,5 @@
-// components/custom-navigation/custom-navigation.js
 const app = getApp();
-const computedBehavior = require('miniprogram-computed')
 Component({
-  /** 引入计算属性npm */
-  behaviors: [computedBehavior],
   /**
    * 组件的属性列表
    * @title 自定义标题内容
@@ -53,19 +49,22 @@ Component({
       })
     },
     ready() {
-      console.log(app.globalData)
+        //
     }
   },
   /**
-   * 组件的方法列表
-   */
+   * 组件的方法列表 */
   methods: {
       goBack() {
-        if (this.data.customBack) {
-          this.triggerEvent('goback')
-          return
-        }
-        console.log('返回')
+        console.log('123')
+        // if (this.data.customBack) {
+        //   this.triggerEvent('goback')
+        //   return
+        // }
+        // // 获取当前页面栈
+        // console.log(123)
+        // let getCurrent = wx.getCurrentPages();
+        // console.log(getCurrent)
       },
       goHome() {
         if (this.data.customHome) {
