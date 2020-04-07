@@ -7,7 +7,8 @@
     "pages/logs/logs"
   ],
   "usingComponents": {
-      "Navigation": "components/custom-navigation/custom-navigation"
+      "Navigation": "components/custom-navigation/custom-navigation",
+      "van-toast": "./miniprogram_npm/@vant/weapp/toast/index"
   },
   "window": {
     "backgroundTextStyle": "light",

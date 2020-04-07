@@ -56,21 +56,28 @@ Component({
    * 组件的方法列表 */
   methods: {
       goBack() {
-        console.log('123')
-        // if (this.data.customBack) {
-        //   this.triggerEvent('goback')
-        //   return
-        // }
-        // // 获取当前页面栈
-        // console.log(123)
-        // let getCurrent = wx.getCurrentPages();
-        // console.log(getCurrent)
+        if (this.data.customBack) {
+          this.triggerEvent('goback')
+          return
+        }
+        // 获取当前页面栈
+        let getCurrent = getCurrentPages();
+        // 如果页面栈长度大于1的时候才能触发back挑战  tabbar页面之间相互跳转是不会存入到页面栈中
+        if (getCurrent.length > 1) {
+            wx.navigateBack({
+                data: 1
+            })
+        }
+        
+        console.log(getCurrent)
       },
       goHome() {
         if (this.data.customHome) {
           this.triggerEvent('gohome')
         }
-        console.log('返回首页')
+        wx.reLaunch({
+          url: '/pages/index/index'
+        });
       }
   }
 })

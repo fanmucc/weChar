@@ -1,5 +1,7 @@
 <!--index.wxml-->
 <Navigation back="{{true}}" home="{{true}}" title="调货系统"/>
 <view class="container">
-  123
+  <view style="width: 100%; height: 200px; border: 1px solid;" class="" hover-class="hoverClass" hover-stop-propagation="false" hover-start-time="5000">
+    
+  </view>
 </view>

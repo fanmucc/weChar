@@ -2,6 +2,7 @@ const app = getApp();
 import Toast from '../../miniprogram_npm/@vant/weapp/toast/toast';
 Page({
     data: {
+        value: '',
         activeKey: 1,
         list: [
             {
@@ -123,23 +124,36 @@ Page({
             this.getTabBar().setData({
                 selected: 1
             })
-        }
+        };
     },
     getGoods(event) {
         console.log(event.target.dataset['id'])
         let id = event.target.dataset['id'];
-        this.setData({
-            mask: true
-        })
-        Toast.loading({
-            mask: this.data.mask,
-            message: '跳转中...'
-        })
         wx.navigateTo({
             url: `/pages/goods/goods?id=${id}`,
             complete: () => {
                 console.log('跳转了')
             }
         })
-    }
+    },
+    // 搜索事件 
+    onSearch() {
+        console.log('触发搜索')
+        this.setData({
+            mask: true
+        })
+        Toast.loading({
+            duration: 0,       // 持续展示 toast
+            forbidClick: true, // 禁用背景点击
+            message: '加载中',
+            loadingType: 'spinner',
+            selector: '#custom-selector'
+        });
+        Toast.clear();
+    },
+    // 取消事件
+    onCancel() {
+        console.log('取消了')
+    },
+    
 })

@@ -1,5 +1,6 @@
 <Navigation back="{{true}}" title="购物车"></Navigation>
 <view class="cart-content">
+    <van-toast id="custom-selector" />
     <scroll-view scroll-x="false" scroll-x="false" class="sidebar">
         <van-sidebar active-key="{{ activeKey }}" bind:change="onChange">
             <van-sidebar-item title="标签名称" />
@@ -8,7 +9,11 @@
         </van-sidebar>
     </scroll-view>
     <scroll-view class="cart-lists" hover-class="none" hover-stop-propagation="false">
+        <van-search value="{{ value }}" 
+                    placeholder="请输入搜索关键词" 
+                    bind:search="onSearch"
+                    bind:cancel="onCancel"/>
         <cart-list wx:for="{{list}}" wx:key="index" name="{{item.name}}" data-id="{{item.id}}" bindtap="getGoods"></cart-list>
-    </scroll-view>
+    </scroll-view> 
 </view>
 <tab-bar-foot/>
