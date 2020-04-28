@@ -1,7 +1,6 @@
-<view class="costomBar" style="padding-bottom: {{iphoneModel === true ? '30' : '0'}}px;">
-    <view class="costomTab" style="color: {{selected === index ? '#9BD0EA' : ''}}" wx:for="{{list}}" wx:key="index" data-path="{{item.pagePath}}" data-index="{{item.index}}" bindtap="switchTab">
+<view class="costomBar" hover-class="none" hover-stop-propagation="false" style="padding-bottom: {{iphoneModel === true ? '30' : '0'}}px;">
+    <view class="costomTab" hover-class="none" hover-stop-propagation="false" style="color: {{selected === index ? '#9BD0EA' : ''}}" wx:for="{{list}}" wx:key="index" data-path="{{item.pagePath}}" data-index="{{item.index}}" bindtap="switchTab">
         <view class="{{item.iconClassName}} tabBar-icon"></view>
         <view class="tabBar-text">{{item.text}}</view>
-    </view>
+    </view>    
 </view>
-<view class="empty" style="padding-bottom: {{iphoneModel === true ? '30' : '0'}}px;"></view>

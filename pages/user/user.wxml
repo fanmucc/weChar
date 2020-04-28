@@ -1,4 +1,4 @@
-<Navigation back="{{true}}" title="个人中心"></Navigation>
+<Navigation title="个人中心"></Navigation>
 <view class="" hover-class="none" hover-stop-propagation="false">
     个人中心
 </view>

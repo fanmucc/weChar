@@ -1,4 +1,5 @@
 {
   "usingComponents": {
+      "view-custom": "../../components/custom-buttom-center/custom-buttom-center"
   }
 }

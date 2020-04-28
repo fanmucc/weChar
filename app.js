@@ -35,12 +35,15 @@ App({
   },
   globalData: {
     userInfo: null,
-    statusBarHeight: wx.getSystemInfoSync()['statusBarHeight'],
-    phoneSystem: wx.getSystemInfoSync()["system"].indexOf("iOS") !== -1 ? 2 : 1,
-    getMenuButtonBoundingClientRect: wx.getMenuButtonBoundingClientRect(),
-    screenWidth: wx.getSystemInfoSync()['screenWidth'],
-    iphoneModel: wx.getSystemInfoSync()["model"].indexOf("iPhone X") !== -1 || wx.getSystemInfoSync()["model"].indexOf("iPhone 11") !== -1 || wx.getSystemInfoSync()["model"].indexOf("iPhone XR") !== -1 || wx.getSystemInfoSync()["model"].indexOf("unknow") !== -1,
+    statusBarHeight: wx.getSystemInfoSync()['statusBarHeight'],       // 获取屏幕信息栏高度
+    screenHeight: wx.getSystemInfoSync()['statusBarHeight'],         // 获取屏幕高度
+    phoneSystem: wx.getSystemInfoSync()["system"].indexOf("iOS") !== -1 ? 2 : 1,    // 判断是否为ios系统设置
+    getMenuButtonBoundingClientRect: wx.getMenuButtonBoundingClientRect(),      // 获取小程序右上角按钮的布局位置(绝对定位 top right bottom left) 一次来布局自定义左上角返回按钮位置
+    screenWidth: wx.getSystemInfoSync()['screenWidth'],       // 获取屏幕宽度
+    customHeight: 61,             // 固定高度， tabbar高度为61px
+    iphoneModel: wx.getSystemInfoSync()["model"].indexOf("iPhone X") !== -1 || wx.getSystemInfoSync()["model"].indexOf("iPhone 11") !== -1 || wx.getSystemInfoSync()["model"].indexOf("iPhone XR") !== -1 || wx.getSystemInfoSync()["model"].indexOf("unknow") !== -1,  // 检测是否为ios特定版本设备，此版本设备应当注意小白条遮挡效果
     // 自定义tabbar数据
-    isShowTabBar: true,
+    isShowTabBar: true,  
+    // screenViewHieght:  wx.getSystemInfoSync()['statusBarHeight'] - (wx.getMenuButtonBoundingClientRect().bottom + 10 +  61) - iphoneModel     //      此数据在每个页面进行调用 判断是否有小白条来进行设置
   }
 })

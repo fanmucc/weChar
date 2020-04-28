@@ -1,17 +1,39 @@
-<view class="navigation-box" style="height:{{navigationHeight}}px">
-    <view class="navigation-icon-content" wx:if="{{back === true || home === true}}" style="width: {{navigationWidth}}px; height:{{titleHeight}}px; left: {{navigationLeft}}px; top: {{navigationTop}}px; ">
-        <view wx:if="{{back}}" bind:tap="goBack">
-            <view class="iconfont icon icon-back"></view>
-        </view>
-        <view wx:if="{{back && home}}">
-            <view class="iconfont icon icon-line lineColor"></view>
-        </view>
-        <view wx:if="{{home}}" bindtap="goHome">
-            <view class="iconfont icon icon-home"></view>
+<view class="{{transparent == true ? 'navigation-box-transparent' : 'navigation-box'}}" style="height:{{navigationHeight}}px">
+    <view class="" wx:if="{{status && !transparent}}">
+        <view class="navigation-icon-content" style="width: {{navigationWidth}}px; height:{{titleHeight}}px; left: {{navigationLeft}}px; top: {{navigationTop}}px; ">
+            <view bind:tap="goBack">
+                <view class="iconfont icon icon-back"></view>
+            </view>
+            <view>
+                <view class="iconfont icon icon-line lineColor"></view>
+            </view>
+            <view bindtap="goHome">
+                <view class="iconfont icon icon-home"></view>
+            </view>
         </view>
     </view>
-    <view class="title-wrapper" style="height:{{titleHeight}}px; top: {{navigationTop}}px" bind:tap="goBack">
+    <view class="" wx:if="{{!status && !transparent}}">
+        <view class="navigation-icon-content-oneIcon" style="height:{{titleHeight}}px; left: {{navigationLeft}}px; top: {{navigationTop}}px; ">
+            <view wx:if="{{back}}" bind:tap="goBack">
+                <view class="iconfont icon icon-back"></view>
+            </view>
+            <view wx:if="{{home}}" bindtap="goHome">
+                <view class="iconfont icon icon-home"></view>
+            </view>
+        </view>
+    </view>
+    <view class="" wx:if="{{transparent}}">
+        <view class="navigation-icon-content-transparent" style="height:{{titleHeight}}px; left: {{navigationLeft}}px; top: {{navigationTop}}px; ">
+            <view wx:if="{{back}}" bind:tap="goBack">
+                <view class="iconfont icon icon-back"></view>
+            </view>
+            <view wx:if="{{home}}" bindtap="goHome">
+                <view class="iconfont icon icon-home"></view>
+            </view>
+        </view>
+    </view>
+    <view wx:if="{{!transparent}}" class="title-wrapper" style="height:{{titleHeight}}px; top: {{navigationTop}}px" bind:tap="goBack">
         <view class="title">{{title}}</view>
-    </view>
+    </view> 
 </view>
-<view class="empty" style="height:{{navigationHeight}}px;"></view>
+<view wx:if="{{!transparent}}" class="empty" style="height:{{navigationHeight}}px;"></view>

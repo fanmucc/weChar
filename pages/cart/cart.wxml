@@ -1,4 +1,4 @@
-<Navigation back="{{true}}" title="购物车"></Navigation>
+<Navigation title="购物车" />
 <view class="cart-content">
     <van-toast id="custom-selector" />
     <scroll-view scroll-x="false" scroll-x="false" class="sidebar">

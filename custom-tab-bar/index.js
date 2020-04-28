@@ -76,18 +76,17 @@ Component({
             const url = tabBarData.path;
             console.log(url)
             // 进行页面跳转
-            wx.switchTab({
-                url,
-                fail: (err) => {
-                    console.log(err)
-                },
-                complete: () => {
-                    console.log(111)
-                    this.setData({
-                        switchLock: false
-                    })
-                }
-            })
+            // wx.switchTab({
+            //     url,
+            //     fail: (err) => {
+            //         console.log(err)
+            //     },
+            //     complete: () => {
+            //         this.setData({
+            //             switchLock: false
+            //         })
+            //     }
+            // })
             this.setData({
                 selected: tabBarData.index
             });
