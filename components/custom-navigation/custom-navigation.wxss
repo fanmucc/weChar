@@ -12,9 +12,17 @@
   left: 0;
   background: rgba(255,255,255,1);
   overflow: hidden;
-  z-index: 9999;
+  z-index: 999;
   box-shadow: 0 2rpx 0 0 rgba(240,240,240,1)
 }
+
+
+.navigation {
+  position: absolute;
+  z-index: 9999;
+}
+
+
 
 .navigation-box-transparent {
     position: fixed;
@@ -23,48 +31,11 @@
     top: 0;
     left: 0;
     overflow: hidden;
-    z-index: 9999;
-}
-
-
-
- .navigation-icon-content {
-    position: absolute;
-    box-sizing: border-box;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    border: 0.5px solid rgba(231,231,231,1);
-    background: rgba(255,255,255,1);
-    border-radius: 20px;
-    overflow: hidden;
-    padding: 4px 10px;
     z-index: 999;
 }
 
- .navigation-icon-content-oneIcon {
-  position: absolute;
-  box-sizing: border-box;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background: rgba(255,255,255,1);
-  overflow: hidden;
-  padding: 4px;
-  z-index: 999;
-}
 
 
-.navigation-icon-content-transparent {
-  position: absolute;
-  box-sizing: border-box;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  overflow: hidden;
-  padding: 4px;
-  z-index: 999;
-}
 
 .lineColor {
     color: rgba(0,0,0,0.1)

@@ -49,6 +49,7 @@ Component({
   },
   lifetimes: {
     attached () {
+      console.log(this.data)
       this.setData({
         navigationWidth: this.data.back === false ? '25px' : app.globalData.getMenuButtonBoundingClientRect.width || this.data.home === false ? '25px' : app.globalData.getMenuButtonBoundingClientRect.width,
         status: this.oneIcon()
@@ -66,30 +67,6 @@ Component({
           if (this.data.back && this.data.home) return true
           else return false
           
-      },
-      goBack() {
-        if (this.data.customBack) {
-          this.triggerEvent('goback')
-          return
-        }
-        // 获取当前页面栈
-        let getCurrent = getCurrentPages();
-        // 如果页面栈长度大于1的时候才能触发back挑战  tabbar页面之间相互跳转是不会存入到页面栈中
-        if (getCurrent.length > 1) {
-            wx.navigateBack({
-                data: 1
-            })
-        }
-        
-        console.log(getCurrent)
-      },
-      goHome() {
-        if (this.data.customHome) {
-          this.triggerEvent('gohome')
-        }
-        wx.reLaunch({
-          url: '/pages/index/index'
-        });
       }
   }
 })

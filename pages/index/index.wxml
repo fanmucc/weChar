@@ -1,5 +1,5 @@
 <!--index.wxml-->
-<Navigation title="调货系统" back="{{true}}" home="{{false}}" transparent="{{true}}"/>
+<Navigation title="调货系统" back="{{false}}" home="{{true}}" transparent="{{true}}"/>
 <view class="container">
       <view class="" hover-class="none" hover-stop-propagation="false" style="height: 1000px; background: red;">
         
