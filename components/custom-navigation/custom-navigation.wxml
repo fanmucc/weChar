@@ -1,4 +1,14 @@
-<view class="{{transparent == true ? 'navigation-box-transparent' : 'navigation-box'}}" style="height:{{navigationHeight}}px">
+<!-- <view wxLif="{{transparent == true}}" ? 'navigation-box-transparent' : 'navigation-box'}}" style="height:{{navigationHeight}}px"> -->
+<view wx:if="{{transparent == true}}" class="navigation-box-transparent": style="height:{{navigationHeight}}px; width: 120px;">
+    <view class="navigation" style="height:{{titleHeight}}px; left: {{navigationLeft}}px; top: {{navigationTop}}px;">
+         <navigation-icon back="{{back}}" home="{{home}}" status="{{status}}" transparent="{{transparent}}" titleHeight="{{titleHeight}}"/>
+    </view>
+
+    <view wx:if="{{!transparent}}" class="title-wrapper" style="height:{{titleHeight}}px; top: {{navigationTop}}px">
+        <view class="title">{{title}}</view>
+    </view> 
+</view>
+<view wx:else class="navigation-box": style="height:{{navigationHeight}}px">
     <view class="navigation" style="height:{{titleHeight}}px; left: {{navigationLeft}}px; top: {{navigationTop}}px;">
          <navigation-icon back="{{back}}" home="{{home}}" status="{{status}}" transparent="{{transparent}}" titleHeight="{{titleHeight}}"/>
     </view>
